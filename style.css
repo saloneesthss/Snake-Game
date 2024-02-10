@@ -4,7 +4,7 @@
 }
 
 .body{
-    background: url("peakpx.jpg");
+    background: url("background.jpg");
     min-height: 100vh;
     background-size: 120vw 110vh;
     background-repeat: no-repeat;
@@ -13,7 +13,7 @@
     align-items: center;
 }
 
-.body .board{
+#board{
     background: linear-gradient(rgb(248, 222, 173),rgb(159, 240, 159));
     width: 80vmin;
     height: 85vmin;
@@ -25,6 +25,10 @@
 
 .head{
     background-color: red;
+}
+
+.snake{
+    background-color: purple;
 }
 
 .food{
