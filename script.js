@@ -31,7 +31,7 @@ function gameEngine(){
         snakeElement=document.createElement('div');
         snakeElement.style.gridRowStart=e.y;
         snakeElement.style.gridColumnStart=e.x;
-        snakeElement.classlist.add('snake');
+
         if(index===0){
             snakeElement.classlist.add('head');
         }
@@ -52,3 +52,27 @@ function gameEngine(){
 
 //Main logic of game
 window.requestAnimationFrame(main);
+window.addEventListener('keydown',e=>{
+    inputDir={x:0, y:1}  // Start the game
+    moveSound.play();
+    switch (e.key) {
+        case "ArrowUp":
+            console.log("ArrowUp")
+            break;
+
+        case "ArrowDown":
+                console.log("ArrowDown")
+                break;
+
+        case "ArrowLeft":
+            console.log("ArrowLeft")
+            break;
+
+        case "ArrowRight":
+            console.log("ArrowRight")
+            break;
+        
+        default:
+            break;
+    }
+});
