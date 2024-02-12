@@ -1,5 +1,5 @@
 //Game Constants and Variables
-let direction={x:0, y:0};
+let inputDir={x:0, y:0};
 const foodSound=new Audio('eating.mp3');
 const gameOverSound=new Audio('gameover.mp3');
 const moveSound=new Audio('move.mp3');
@@ -14,7 +14,7 @@ food={x:6, y:7};
 //Game functions
 function main(ctime){
     window.requestAnimationFrame(main);
-    //console.log(ctime)
+    console.log(ctime)
     if((ctime-lastPaintTime)/1000 < 1/speed){
         return;
     }
@@ -27,6 +27,8 @@ function gameEngine(){
     if(isCollide(snakeArr)){
         gameOverSound.play();
         musicSound.pause();
+        inputDir={x:0, y:0}
+        alert("Game Over. Tap to play again!");
     }
 
 
