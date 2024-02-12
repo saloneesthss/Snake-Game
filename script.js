@@ -24,6 +24,11 @@ function main(ctime){
 
 function gameEngine(){
     //Updating the snake array and food
+    if(isCollide(snakeArr)){
+        gameOverSound.play();
+        musicSound.pause();
+    }
+
 
     //Display the snake
     board.innerHTML="";
