@@ -15,7 +15,7 @@ food={x:6, y:7};
 //Game functions
 function main(ctime){
     window.requestAnimationFrame(main);
-    console.log(ctime)
+    //console.log(ctime)
     if((ctime-lastPaintTime)/1000 < 1/speed){
         return;
     }
@@ -39,7 +39,9 @@ function gameEngine(){
         score=0;
     }
 
+//If the food is eaten, then increase the score and regenerate the food
 
+    
     //Display the snake
     board.innerHTML="";
     snakeArr.forEach((e, index)=>{
