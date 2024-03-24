@@ -48,7 +48,6 @@ function gameEngine(){
         snakeElement=document.createElement('div');
         snakeElement.style.gridRowStart=e.y;
         snakeElement.style.gridColumnStart=e.x;
-
         if(index===0){
             snakeElement.classlist.add('head');
         }

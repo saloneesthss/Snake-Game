@@ -4,7 +4,7 @@
 }
 
 .body{
-    background: url("background.jpg");
+    background: url("../Resources/background.jpg");
     min-height: 100vh;
     background-size: 120vw 110vh;
     background-repeat: no-repeat;
@@ -15,8 +15,8 @@
 
 #board{
     background: linear-gradient(rgb(248, 222, 173),rgb(159, 240, 159));
-    width: 80vmin;
-    height: 85vmin;
+    width: 85vmin;
+    height: 90vmin;
     border: 2px solid black;
     display: grid;
     grid-template-rows: repeat(18,1fr);
