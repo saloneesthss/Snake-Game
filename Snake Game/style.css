@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-.body{
+body{
     background: url("../Resources/background.jpg");
     min-height: 100vh;
     background-size: 120vw 110vh;
@@ -13,7 +13,7 @@
     align-items: center;
 }
 
-#board{
+.game-border1{
     background: linear-gradient(rgb(248, 222, 173),rgb(159, 240, 159));
     width: 85vmin;
     height: 90vmin;
