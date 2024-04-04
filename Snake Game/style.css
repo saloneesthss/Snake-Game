@@ -20,8 +20,8 @@ body{
     height: 89vmin;
     border: 2px solid black;
     display: grid;
-    grid-template-rows: repeat(18,1fr);
-    grid-template-columns: repeat(18,1fr);
+    grid-template-rows: repeat(20,1fr);
+    grid-template-columns: repeat(20,1fr);
 }
 
 .scores {
@@ -42,25 +42,28 @@ body{
 
 #instruction-text {
     position: absolute;
-    top: 63%;
+    top: 65%;
     width: 300px;
     text-align: center;
     text-transform: capitalize;
     padding: 30px;
     margin: 0;
-    left: 26%
+    left: 38%
 }
 
 .snake{
     border: gray 2px dotted;
+    background-color: orange;
 }
 
 .food{
-    background-color: chocolate;
-    border: #999 5px solid;
+    background-color: lightseagreen;
+    border: gray 1px solid;
 }
 
 #logo {
     position: absolute;
-    left:35%
+    left: 38%;
+    height: 40%;
+    top: 28%;
 }
