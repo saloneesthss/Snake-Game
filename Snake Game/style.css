@@ -8,30 +8,59 @@ body{
     min-height: 100vh;
     background-size: 120vw 110vh;
     background-repeat: no-repeat;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
 }
 
-.game-border1{
+#game-board{
     background: linear-gradient(rgb(248, 222, 173),rgb(159, 240, 159));
-    width: 85vmin;
-    height: 90vmin;
+    width: 83vmin;
+    height: 89vmin;
     border: 2px solid black;
     display: grid;
     grid-template-rows: repeat(18,1fr);
     grid-template-columns: repeat(18,1fr);
 }
 
-.head{
-    background-color: red;
+.scores {
+    display: flex;
+    justify-content: space-between;
+}
+
+#score {
+    color:rgb(218, 97, 107);
+}
+
+#score, 
+#highScore {
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 10px 0;
+}
+
+#instruction-text {
+    position: absolute;
+    top: 63%;
+    width: 300px;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 30px;
+    margin: 0;
+    left: 26%
 }
 
 .snake{
-    background-color: purple;
+    border: gray 2px dotted;
 }
 
 .food{
-    background-color: blue;
+    background-color: chocolate;
+    border: #999 5px solid;
+}
+
+#logo {
+    position: absolute;
+    left:35%
 }
