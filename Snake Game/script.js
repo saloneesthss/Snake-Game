@@ -15,6 +15,12 @@ let gameInterval;
 let gameSpeedDelay=200;
 let gameStarted=false;
 
+//Define sound elements
+let foodSound=new Audio('../Resources/eating.mp3');
+let gameOverSound=new Audio('../Resources/gameover.mp3');
+let moveSound=new Audio('../Resources/move.mp3');
+let musicSound=new Audio('../Resources/music.mp3');
+
 //Draw game map, snake, food
 function draw() {
     board.innerHTML="";
@@ -83,6 +89,7 @@ function move() {
     snake.unshift(head);
 
     if (head.x===food.x && head.y===food.y) {
+        foodSound.play();
         food=generateFood();
         increaseSpeed();
         clearInterval(gameInterval);  //Clear past interval
@@ -99,6 +106,7 @@ function move() {
 //Start game function
 function startGame() {
     gameStarted=true;  //Keep track of a running game
+    musicSound.play();
     instructionText.style.display='none';
     logo.style.display='none';
     gameInterval=setInterval(()=>{
@@ -113,6 +121,7 @@ function handleKeyPress(event) {
     if ((!gameStarted && event.code==='Space') || (!gameStarted && event.key===' ')) {
         startGame();
     } else {
+        moveSound.play();
         switch (event.key) {
             case 'ArrowUp':
                 direction='up';
@@ -146,10 +155,14 @@ function increaseSpeed() {
 function checkCollision() {
     const head=snake[0];
     if(head.x<1 || head.x>gridSize || head.y<1 || head.y>gridSize) {
+        gameOverSound.play();
+        musicSound.pause();
         resetGame();
     }
     for (let i=1;i<snake.length;i++) {
         if (head.x===snake[i].x && head.y===snake[i].y) {
+            gameOverSound.play();
+            musicSound.pause();
             resetGame();
         }
     }
