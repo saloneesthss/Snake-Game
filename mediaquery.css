@@ -1,0 +1,44 @@
+@media only screen and (max-width: 1100px) {
+    #instruction-text {
+        left: 32%
+    }
+    #logo {
+        left: 37%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    #instruction-text {
+        left: 28%
+    }
+    #logo {
+        left: 33%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #instruction-text {
+        left: 25%
+    }
+    #logo {
+        left: 30%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #instruction-text {
+        left: 23%
+    }
+    #logo {
+        left: 28%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #instruction-text {
+        left: 18%
+    }
+    #logo {
+        left: 25%;
+    }
+}
